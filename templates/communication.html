@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}communication{% endblock title %}
+{% block content %}
+<div class="page-title" data-aos="fade">
+    <div class="heading">
+      <div class="container">
+        <div class="row d-flex justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1>We listen because you communicate</h1>
+            <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="col-lg-8">
+    <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+      <div class="row gy-4">
+
+        <div class="col-md-6">
+            <label for="name" class="form-label">Name</label>
+          <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+        </div>
+
+        <div class="col-md-6 ">
+            <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+        </div>
+
+        <div class="col-md-12">
+            <label for="phone" class="form-label">Phone</label>
+          <input type="tel" class="form-control" name="phone" placeholder="Phone" required="">
+        </div>
+
+        <div class="col-md-12">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" class="form-control" name="date" placeholder="Date" required="">
+          </div>
+
+        <div class="col-md-12">
+          <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+        </div>
+
+        <div class="col-md-12 text-center">
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your message has been sent. Thank you!</div>
+
+          <button type="submit">Send Message</button>
+        </div>
+
+      </div>
+    </form>
+  </div><!-- End Contact Form -->
+  {% endblock content %}
